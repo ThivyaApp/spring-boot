@@ -6,22 +6,27 @@ import javax.persistence.*;
 
 public class User {
 
-
     private long id;
     private String username;
     private String password;
-    private String firstName;
-    private String secondName;
+    private String firstname;
+    private String lastname;
     private String num;
-    private String licenseNum;
-    private String userType;
+    private String licensenum;
+    private String usertype;
 
     public User() {}
 
-    public User(String username, String password) {
+    public User(String username, String password, String firstname, String lastname, String num, String licensenum, String usertype) {
         super();
+
         this.username = username;
         this.password = password;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.num = num;
+        this.licensenum = licensenum;
+        this.usertype = usertype;
     }
 
     @Id
@@ -43,20 +48,20 @@ public class User {
     public String getPassword () {return password;}
     public void setPassword (String password){this.password = password; }
 
-    @Column(name = "firstName")
-    public String getFirstName () {
-        return firstName;
+    @Column(name = "firstname")
+    public String getFirstname () {
+        return firstname;
     }
-    public void setFirstName (String firstName){
-        this.firstName = firstName;
+    public void setFirstname (String firstname){
+        this.firstname = firstname;
     }
 
-    @Column(name = "secondName")
-    public String getSecondName () {
-        return secondName;
+    @Column(name = "lastname")
+    public String getLastname () {
+        return lastname;
     }
-    public void setSecondName (String secondName){
-        this.secondName = secondName;
+    public void setLastname (String lastname){
+        this.lastname = lastname;
     }
 
     @Column(name = "num")
@@ -64,11 +69,11 @@ public class User {
     public void setNum (String num){this.num = num; }
 
     @Column(name = "licensenum")
-    public String getLicenseNum() {return licenseNum;}
-    public void setLicenseNum (String licenseNum){this.licenseNum = licenseNum; }
+    public String getLicensenum() {return licensenum;}
+    public void setLicensenum (String licensenum){this.licensenum = licensenum; }
 
-    @Column(name = "userType")
-    public String getUserType() {return userType;}
-    public void setUserType (String userType){this.userType = userType; }
+    @Column(name = "usertype")
+    public String getUsertype() {return usertype;}
+    public void setUsertype (String usertype){this.usertype = usertype; }
 
 }

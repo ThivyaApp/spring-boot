@@ -50,12 +50,12 @@ public class UserController {
 
         user.setUsername(userDetails.getUsername());
         user.setPassword(userDetails.getPassword());
-        user.setFirstName(userDetails.getFirstName());
-        user.setSecondName(userDetails.getSecondName());
+        user.setFirstname(userDetails.getFirstname());
+        user.setLastname(userDetails.getLastname());
         user.setPassword(userDetails.getPassword());
         user.setNum(userDetails.getNum());
-        user.setLicenseNum(userDetails.getLicenseNum());
-        user.setUserType(userDetails.getUserType());
+        user.setLicensenum(userDetails.getLicensenum());
+        user.setUsertype(userDetails.getUsertype());
 
         final User updatedUser = userRepository.save(user);
         return ResponseEntity.ok(updatedUser);

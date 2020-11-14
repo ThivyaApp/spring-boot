@@ -24,7 +24,7 @@ import com.springboot.centreequestre.exception.ResourceNotFoundException;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api")
-//link : http://localhost:8080/centreequestre/api/v1/horses/1
+//link : http://localhost:8080/centreequestre/api/horses/1
 
 public class ChevalController {
 
