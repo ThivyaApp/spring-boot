@@ -23,7 +23,7 @@ import com.springboot.centreequestre.exception.ResourceNotFoundException;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api")
 //link : http://localhost:8080/centreequestre/api/v1/horses/1
 
 public class ChevalController {
@@ -42,7 +42,7 @@ public class ChevalController {
     public ResponseEntity<Cheval> getHorseById(@PathVariable(value = "id") Long horseId)
             throws ResourceNotFoundException {
         Cheval horse = chevalRepository.findById(horseId)
-                .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + horseId));
+                .orElseThrow(() -> new ResourceNotFoundException("Horse not found for this id :: " + horseId));
         return ResponseEntity.ok().body(horse);
     }
 
