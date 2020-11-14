@@ -1,7 +1,6 @@
 package com.springboot.centreequestre.controller;
 
 import com.springboot.centreequestre.exception.ResourceNotFoundException;
-import com.springboot.centreequestre.model.Cheval;
 import com.springboot.centreequestre.model.User;
 import com.springboot.centreequestre.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
